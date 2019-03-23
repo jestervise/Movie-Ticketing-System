@@ -1,0 +1,27 @@
+<component name="ArtifactManager">
+  <artifact type="javafx" name="MovieTicketingSystem">
+    <output-path>$PROJECT_DIR$/out/artifacts/MovieTicketingSystem</output-path>
+    <properties id="ant-postprocessing">
+      <options enabled="true" />
+    </properties>
+    <properties id="ant-preprocessing">
+      <options enabled="true" />
+    </properties>
+    <properties id="javafx-properties">
+      <options>
+        <option name="appClass" value="MovieTicketingSystem.Main" />
+        <option name="convertCss2Bin" value="true" />
+        <option name="description" value="" />
+        <option name="htmlPlaceholderId" value="" />
+        <option name="title" value="dasKino" />
+        <option name="vendor" value="dasKinoCo" />
+        <option name="version" value="1.0" />
+      </options>
+    </properties>
+    <root id="root">
+      <element id="archive" name="MovieTicketingSystem.jar">
+        <element id="module-output" name="MovieTicketingSystem" />
+      </element>
+    </root>
+  </artifact>
+</component>

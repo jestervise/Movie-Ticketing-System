@@ -1,0 +1,8 @@
+@font-face{
+    font-family: customFont;
+    src: url('Bitter-Regular.otf');
+}
+
+#lol{
+    -fx-font-family: customFont;
+}

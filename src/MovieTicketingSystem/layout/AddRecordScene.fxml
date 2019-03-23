@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="basePane" prefHeight="325.0" prefWidth="382.0" style="-fx-background-color: #242E44;" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MovieTicketingSystem.controllers.AddRecordSceneController">
+   <children>
+      <JFXTextField fx:id="addRecordButton" labelFloat="true" layoutX="107.0" layoutY="147.0" promptText="Add Movie" style="-fx-prompt-text-fill: #4059A9; -fx-text-fill: white;" unFocusColor="#4059a9" />
+      <ImageView fitHeight="42.0" fitWidth="74.0" layoutX="308.0" layoutY="3.0" onMouseClicked="#CloseWindow" onMouseEntered="#ScaleUpButton" onMouseExited="#ScaleDownButton" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../rsc/accountPage/button_cancel.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

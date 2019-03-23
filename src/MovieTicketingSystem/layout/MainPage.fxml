@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+
+<BorderPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MovieTicketingSystem.controllers.MainPageController">
+   <left>
+      <Pane prefHeight="400.0" prefWidth="303.0" style="-fx-background-color: #59C7C6;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="logoImage" fitHeight="67.0" fitWidth="228.0" layoutX="14.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../rsc/dasKino.png" />
+               </image>
+               <effect>
+                  <Lighting diffuseConstant="0.85" specularExponent="24.39" surfaceScale="1.62">
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect></ImageView>
+            <ImageView fx:id="promotionImages" fitHeight="254.0" fitWidth="199.0" layoutX="46.0" layoutY="82.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../rsc/popCorn.png" />
+               </image></ImageView>
+         </children></Pane>
+   </left>
+   <center>
+      <Pane prefHeight="362.0" prefWidth="293.0" style="-fx-background-color: #242E44;" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="signInText" layoutX="14.0" layoutY="14.0" style="-fx-font-size: 32; -fx-font-weight: bold;" text="SIGN IN" textFill="WHITE" />
+            <JFXTextField id="inputText" fx:id="userNameTextField" labelFloat="true" layoutX="49.0" layoutY="94.0" onAction="#UserNameValidation" prefHeight="46.0" prefWidth="200.0" promptText="USER NAME" style="-fx-prompt-text-fill: #4059a9; -fx-text-fill: #4059a9;" unFocusColor="WHITE" />
+            <JFXButton fx:id="loginButton" defaultButton="true" layoutX="73.0" layoutY="279.0" onAction="#ValidateUser" onMouseEntered="#ScaleUpLoginButton" onMouseExited="#ScaleDownLoginButton" prefHeight="46.0" prefWidth="153.0" ripplerFill="WHITE" style="-fx-background-color: #59C7C6;" text="LOGIN" textFill="WHITE" />
+            <ImageView fitHeight="28.0" fitWidth="37.0" layoutX="21.0" layoutY="148.0" pickOnBounds="true" preserveRatio="true" />
+            <JFXPasswordField id="inputText" fx:id="passwordTextField" labelFloat="true" layoutX="48.0" layoutY="161.0" prefHeight="31.0" prefWidth="202.0" promptText="PASSWORD" style="-fx-prompt-text-fill: #4059a9; -fx-text-fill: #4059a9;" unFocusColor="WHITE" />
+            <JFXCheckBox fx:id="rememberMeCheckBox" checkedColor="#59c7c6" layoutX="48.0" layoutY="249.0" text="Remember Me" textFill="WHITE" unCheckedColor="WHITE" />
+            <Text fx:id="registerText" fill="WHITE" layoutX="39.0" layoutY="381.0" onMouseClicked="#RegisterButtonClicked" onMouseEntered="#RegisterTextHover" onMouseExited="#RegisterTextLeave" onMousePressed="#RegisterButtonPressed" onMouseReleased="#RegisterButtonReleased" opacity="0.5" strokeType="OUTSIDE" strokeWidth="0.0" text="Not a member? Register Now!" wrappingWidth="204.3466796875">
+               <effect>
+                  <Glow />
+               </effect>
+            </Text>
+            <Text fx:id="closeButton" fill="WHITE" layoutX="263.0" layoutY="39.0" onMouseClicked="#CloseWindowButtons" onMouseEntered="#ScaleUpCloseButton" onMouseExited="#ScaleDownCloseButton" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 28; -fx-font-family: sans-serif; -fx-font-weight: lighter;" text="X" />
+            <JFXTextArea fx:id="promotionText" editable="false" layoutX="-267.0" layoutY="316.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="172.0" prefWidth="266.0" style="-fx-text-fill: white; -fx-font-weight: bold;" text="You can buy various food and beverages in dasKino!" />
+            <Label fx:id="promptTextField" layoutX="41.0" layoutY="200.0" prefHeight="43.0" prefWidth="216.0" style="-fx-font-size: 12;" textAlignment="CENTER" textFill="#9a1818" wrapText="true" />
+            <ImageView fitHeight="23.0" fitWidth="23.0" layoutX="14.0" layoutY="105.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../rsc/user.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="23.0" fitWidth="23.0" layoutX="14.0" layoutY="167.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../rsc/password.png" />
+               </image>
+            </ImageView>
+         </children>
+         <effect>
+            <DropShadow height="36.55" radius="18.5525" width="39.66" />
+         </effect>
+      </Pane>
+   </center>
+</BorderPane>

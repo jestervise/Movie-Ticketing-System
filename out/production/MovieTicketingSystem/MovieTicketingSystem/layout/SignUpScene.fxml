@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<Pane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #333E50;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MovieTicketingSystem.controllers.SignUpSceneController">
+   <children>
+      <VBox layoutX="49.0" prefHeight="400.0" prefWidth="251.0" spacing="10.0">
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+         <children>
+            <HBox prefHeight="66.0" prefWidth="249.0" spacing="20.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="46.0" prefWidth="125.0" style="-fx-font-size: 30;" text="SIGN UP" textFill="WHITE">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+            </HBox>
+            <Label fx:id="emailPromptTextField" prefHeight="17.0" prefWidth="251.0" style="-fx-font-size: 12;" textFill="#9a1818" />
+            <JFXTextField id="inputText" fx:id="emailTextField" promptText="Enter your email address" style="-fx-prompt-text-fill: #4059a9; -fx-text-fill: #4059a9;" unFocusColor="#2f3a4a" />
+            <Label fx:id="userNamePromptTextField" layoutX="20.0" layoutY="96.0" prefHeight="17.0" prefWidth="251.0" style="-fx-font-size: 12;" textFill="#9a1818" />
+            <JFXTextField id="inputText" fx:id="userNameTextField" promptText="Enter your user name" style="-fx-prompt-text-fill: #4059a9; -fx-text-fill: #4059a9;" unFocusColor="#2f3a4a" />
+            <Label fx:id="passwordPromptTextField" layoutX="20.0" layoutY="164.0" prefHeight="17.0" prefWidth="251.0" style="-fx-font-size: 12;" textFill="#9a1818" />
+            <JFXPasswordField id="inputText" fx:id="passwordTextField" promptText="Enter your password" style="-fx-prompt-text-fill: #4059a9; -fx-text-fill: #4059a9;" unFocusColor="#2f3a4a" />
+            <TextField editable="false" layoutX="20.0" layoutY="244.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="4.0" prefWidth="170.0" style="-fx-font-size: 10; -fx-text-fill: white;" visible="false">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </TextField>
+            <JFXButton fx:id="registerButton" buttonType="RAISED" onAction="#ValidateUser" prefHeight="47.0" prefWidth="107.0" style="-fx-background-color: #4059a9;" text="REGISTER" textFill="WHITE">
+            </JFXButton>
+         </children>
+      </VBox>
+      <Pane layoutX="302.0" prefHeight="442.0" prefWidth="340.0" style="-fx-background-color: #4059a9;">
+         <children>
+            <ImageView fx:id="promotionImages" fitHeight="291.0" fitWidth="260.0" layoutX="38.0" layoutY="80.0" pickOnBounds="true" preserveRatio="true" />
+         </children></Pane>
+      <Text fx:id="closeButton" fill="WHITE" layoutX="561.0" layoutY="39.0" onMouseClicked="#CloseWindowButtons" onMouseEntered="#ScaleUpCloseButton" onMouseExited="#ScaleDownCloseButton" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 28; -fx-font-family: sans-serif;" text="X">
+                  </Text>
+      <ImageView fx:id="backButton" fitHeight="31.0" fitWidth="71.0" layoutX="8.0" layoutY="14.0" onMouseClicked="#BackToMainPage" onMouseEntered="#ScaleUpBackButton" onMouseExited="#ScaleDownBackButton" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../rsc/backArrow-02.png" />
+         </image>
+      </ImageView>
+   </children>
+</Pane>

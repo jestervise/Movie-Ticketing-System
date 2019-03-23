@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+
+<AnchorPane fx:id="basePane" prefHeight="669.0" prefWidth="972.0" style="-fx-background-color: #242E44;" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MovieTicketingSystem.controllers.AddOnPageController">
+   <children>
+      <SplitPane fx:id="splitPane" dividerPositions="0.29799764428739695" prefHeight="160.0" prefWidth="200.0" style="-fx-background-color: #242E44;" stylesheets="@../stylesheets/splitPaneStyle.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="398.0" prefWidth="240.0">
+               <children>
+                  <Label alignment="CENTER" layoutX="93.0" layoutY="88.0" onMouseClicked="#ChangeToSelectSeatScene" style="-fx-font-size: 20;" text="SELECT SEAT" textAlignment="CENTER" textFill="WHITE" />
+                  <Label fx:id="selectTicketText" alignment="CENTER" layoutX="93.0" layoutY="201.0" onMouseClicked="#BackToSelectTicketPage" style="-fx-font-size: 20;" text="SELECT TICKET" textAlignment="CENTER" textFill="WHITE" />
+                  <ImageView fitHeight="68.0" fitWidth="78.0" layoutX="13.0" layoutY="69.0" onMouseClicked="#ChangeToSelectSeatScene" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="13.0" AnchorPane.topAnchor="69.0">
+                     <image>
+                        <Image url="@../rsc/bookingPage/select_seat_normal.png" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="CENTER" layoutX="94.0" layoutY="319.0" style="-fx-font-size: 20;" text="ADD-ONS" textAlignment="CENTER" textFill="#4059a9" />
+                  <Label alignment="CENTER" layoutX="97.0" layoutY="432.0" style="-fx-font-size: 20;" text="PAYMENT" textAlignment="CENTER" textFill="WHITE" />
+                  <Label alignment="CENTER" layoutX="95.0" layoutY="539.0" style="-fx-font-size: 20;" text="CONFIRMATION" textAlignment="CENTER" textFill="WHITE" />
+                  <ImageView fitHeight="68.0" fitWidth="16.0" layoutX="135.0" layoutY="121.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../rsc/bookingPage/line_normal.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="selectTicketIcon" fitHeight="68.0" fitWidth="78.0" layoutX="14.0" layoutY="182.0" onMouseClicked="#BackToSelectTicketPage" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../rsc/bookingPage/select_ticket_normal.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="68.0" fitWidth="78.0" layoutX="14.0" layoutY="300.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../rsc/bookingPage/addons_selected.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="68.0" fitWidth="78.0" layoutX="14.0" layoutY="413.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../rsc/bookingPage/payment_normal.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="68.0" fitWidth="78.0" layoutX="14.0" layoutY="520.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../rsc/bookingPage/confirmation_normal.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="68.0" fitWidth="16.0" layoutX="134.0" layoutY="238.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../rsc/bookingPage/line_normal.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="68.0" fitWidth="16.0" layoutX="135.0" layoutY="356.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../rsc/bookingPage/line_normal.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="68.0" fitWidth="16.0" layoutX="135.0" layoutY="463.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../rsc/bookingPage/line_normal.png" />
+                     </image>
+                  </ImageView>
+               </children></AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="398.0" prefWidth="330.0">
+               <children>
+                  <Label fx:id="customerCountText" style="-fx-font-size: 50;" text="3/4" textFill="WHITE" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="20.0" />
+                  <BorderPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="10.0">
+                     <bottom>
+                        <VBox fx:id="bottomPane" prefHeight="172.0" prefWidth="501.0" spacing="5.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <GridPane fx:id="showOrderPane" prefHeight="154.0" prefWidth="501.0" style="-fx-background-color: #666666; -fx-background-radius: 10; -fx-border-radius: 10; -fx-border-color: white;">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints maxHeight="35.0" minHeight="10.0" prefHeight="24.0" vgrow="SOMETIMES" />
+                                  <RowConstraints maxHeight="62.0" minHeight="10.0" prefHeight="54.0" valignment="CENTER" vgrow="SOMETIMES" />
+                                    <RowConstraints valignment="CENTER" vgrow="SOMETIMES" />
+                                  <RowConstraints vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+      
+      
+                                        <Label fx:id="yourOrderText" style="-fx-font-weight: bold;" text="YOUR ORDER" textFill="WHITE" />
+                                    <AnchorPane GridPane.columnSpan="2" GridPane.rowIndex="1">
+                                       <children>
+                                                 <ScrollPane hbarPolicy="NEVER" style="-fx-background-color: #666666; -fx-border-color: transparent;" stylesheets="@../stylesheets/scrollPaneStyle.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <content>
+                                              <GridPane fx:id="bottomGrid" alignment="CENTER" prefWidth="555.0" style="-fx-background-color: #666666; -fx-border-color: transparent;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                  <columnConstraints>
+                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                  </columnConstraints>
+                                                  <rowConstraints>
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                  </rowConstraints>
+                                                <children>
+                                                   <Label fx:id="movieText2" prefHeight="60.0" prefWidth="135.0" style="-fx-font-size: 15;" text="incredible 2" textAlignment="CENTER" textFill="WHITE" wrapText="true" GridPane.halignment="LEFT" GridPane.rowSpan="2" GridPane.valignment="CENTER" />
+                                                   <Label layoutX="11.0" layoutY="16.0" style="-fx-font-size: 15;" text="SEAT" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowSpan="2" />
+                                                      <Label fx:id="seatText" layoutX="177.0" layoutY="46.0" style="-fx-font-size: 15;" textFill="WHITE" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowSpan="2" GridPane.vgrow="ALWAYS" />
+                                                      <Label fx:id="ticketPrice" layoutX="176.0" layoutY="46.0" prefHeight="30.0" prefWidth="134.0" style="-fx-font-size: 15;" text="incredible 2" textFill="WHITE" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowSpan="2" GridPane.valignment="CENTER" />
+                                                </children>
+                                              </GridPane>
+                                             </content>
+                                                 </ScrollPane>
+                                       </children>
+                                    </AnchorPane>
+                                    <VBox GridPane.rowIndex="3">
+                                       <children>
+                                          <Line fx:id="line" endX="570.0" stroke="WHITE" strokeWidth="2.0" />
+                                          <Label prefHeight="21.0" prefWidth="261.0" style="-fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 12;" text="TOTAL(EXCLUDING BOOKING FEES)" />
+                                       </children>
+                                    </VBox>
+                                    <Label layoutX="21.0" layoutY="59.0" style="-fx-text-fill: white; -fx-font-weight: bold;" text="RM" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="3">
+                                       <padding>
+                                          <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                       </padding>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="5.0" left="10.0" right="10.0" />
+                                 </padding>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </GridPane>
+                              <AnchorPane>
+                                 <children>
+                                    <ImageView fx:id="nextButton" fitHeight="46.0" fitWidth="110.0" onMouseEntered="#ScaleUpButton" onMouseExited="#ScaleDownButton" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="-12.0" AnchorPane.rightAnchor="0.0">
+                                       <image>
+                                          <Image url="@../rsc/button_next.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                           <padding>
+                              <Insets top="5.0" />
+                           </padding>
+                        </VBox>
+                     </bottom>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                     <top>
+                        <VBox prefHeight="55.0" prefWidth="501.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <Label fx:id="movieText" style="-fx-font-weight: bold; -fx-font-size: 20;" text="INCREDIBLE 2" textFill="WHITE" />
+                              <HBox prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <Label text="Showing On " textFill="WHITE" />
+                                    <Label fx:id="cinemaText" layoutX="10.0" layoutY="10.0" textFill="WHITE" />
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="20.0" layoutY="40.0" prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <Label text="dasKino" textFill="WHITE" />
+                                    <Label layoutX="10.0" layoutY="10.0" textFill="WHITE" />
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="5.0" />
+                                 </padding>
+                              </HBox>
+                           </children>
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </VBox>
+                     </top>
+                     <center>
+                        <GridPane hgap="5.0" vgap="5.0" BorderPane.alignment="CENTER">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints />
+                              <ColumnConstraints />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints fillHeight="false" maxHeight="83.0" minHeight="24.0" prefHeight="47.0" valignment="CENTER" vgrow="NEVER" />
+                            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnSpan="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                 <children>
+                                    <Label alignment="CENTER" prefWidth="598.0" style="-fx-font-size: 20;" text="SELECT YOUR ADD ONS" textAlignment="CENTER" textFill="WHITE">
+                                       <padding>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </padding>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #666666; -fx-background-radius: 15; -fx-border-radius: 15; -fx-border-color: white; -fx-border-width: 2;" stylesheets="@../stylesheets/anchorPaneFocusStyle.css" GridPane.rowIndex="1">
+                                 <GridPane.margin>
+                                    <Insets />
+                                 </GridPane.margin>
+                                 <children>
+                                    <Label layoutX="54.0" layoutY="24.0" prefHeight="39.0" prefWidth="99.0" style="-fx-font-size: 12;" text="Double Pepsi Popcorn Combo" textFill="WHITE" wrapText="true" AnchorPane.leftAnchor="52.0" AnchorPane.rightAnchor="135.0" AnchorPane.topAnchor="22.0" />
+                                    <Label layoutX="58.0" layoutY="75.0" prefHeight="17.0" prefWidth="67.0" style="-fx-font-size: 12;" text="RM 7.00" textFill="WHITE" AnchorPane.leftAnchor="56.0" AnchorPane.rightAnchor="163.0" />
+                                    <StackPane blendMode="OVERLAY" layoutX="167.0" layoutY="15.0" prefHeight="96.0" prefWidth="102.0" style="-fx-background-color: white; -fx-background-radius: 10;" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="15.0">
+                                       <children>
+                                          <ImageView fitHeight="89.0" fitWidth="92.0" pickOnBounds="true">
+                                             <image>
+                                                <Image url="@../rsc/combo-ultra.jpg" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                       </padding>
+                                    </StackPane>
+                                    <JFXTextField fx:id="textField1" alignment="CENTER" editable="false" prefHeight="31.0" prefWidth="27.0" style="-fx-text-fill: white;" text="0" unFocusColor="WHITE" AnchorPane.bottomAnchor="17.0" AnchorPane.rightAnchor="35.0" />
+                                    <ImageView fitHeight="23.0" fitWidth="21.0" layoutX="197.0" layoutY="125.0" pickOnBounds="true" preserveRatio="true" />
+                                    <ImageView fx:id="btn1Down" fitHeight="12.0" fitWidth="15.0" layoutX="201.0" layoutY="130.0" onMouseClicked="#DecreaseCount" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="69.0" AnchorPane.topAnchor="128.0">
+                                       <image>
+                                          <Image url="@../rsc/arrow.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fx:id="btn1Up" fitHeight="12.0" fitWidth="15.0" layoutX="249.0" layoutY="131.0" onMouseClicked="#IncreaseCount" pickOnBounds="true" preserveRatio="true" rotate="180.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="128.0">
+                                       <image>
+                                          <Image url="@../rsc/arrow.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="rmText1" layoutX="54.0" layoutY="122.0" text="RM " textFill="WHITE" visible="false" AnchorPane.bottomAnchor="22.0" AnchorPane.leftAnchor="54.0" />
+                                    <Label fx:id="subTotal1" layoutX="84.0" layoutY="126.0" textFill="WHITE" AnchorPane.bottomAnchor="22.0" AnchorPane.leftAnchor="84.0" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="402.0" layoutY="136.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #666666; -fx-background-radius: 15; -fx-border-radius: 15; -fx-border-color: white; -fx-border-width: 2;" GridPane.rowIndex="2">
+                                 <GridPane.margin>
+                                    <Insets />
+                                 </GridPane.margin>
+                                 <children>
+                                    <Label layoutX="43.0" layoutY="14.0" prefHeight="44.0" prefWidth="90.0" style="-fx-font-size: 12;" text="M&amp;M Popcorn Combo" textFill="WHITE" wrapText="true" />
+                                    <Label layoutX="43.0" layoutY="77.0" prefHeight="17.0" prefWidth="58.0" style="-fx-font-size: 12;" text="RM 7.00" textFill="WHITE" />
+                                    <JFXTextField fx:id="textField3" alignment="CENTER" editable="false" layoutX="232.0" layoutY="123.0" prefHeight="31.0" prefWidth="27.0" style="-fx-text-fill: white;" text="0" unFocusColor="WHITE" AnchorPane.bottomAnchor="17.0" AnchorPane.rightAnchor="35.0" />
+                                    <StackPane blendMode="OVERLAY" layoutX="170.0" layoutY="23.0" prefHeight="96.0" prefWidth="102.0" style="-fx-background-color: white; -fx-background-radius: 10;" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="15.0">
+                                       <children>
+                                          <ImageView fitHeight="89.0" fitWidth="92.0" pickOnBounds="true">
+                                             <image>
+                                                <Image url="@../rsc/mandmpopcorn.jpg" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                       </padding>
+                                    </StackPane>
+                                    <ImageView fx:id="btn3Down" fitHeight="12.0" fitWidth="15.0" layoutX="202.0" layoutY="133.0" onMouseClicked="#DecreaseCount" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="69.0" AnchorPane.topAnchor="128.0">
+                                       <image>
+                                          <Image url="@../rsc/arrow.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fx:id="btn3Up" fitHeight="12.0" fitWidth="15.0" layoutX="255.0" layoutY="131.0" onMouseClicked="#IncreaseCount" pickOnBounds="true" preserveRatio="true" rotate="180.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="128.0">
+                                       <image>
+                                          <Image url="@../rsc/arrow.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="rmText3" layoutX="59.0" layoutY="118.0" text="RM " textFill="WHITE" visible="false" AnchorPane.bottomAnchor="22.0" AnchorPane.leftAnchor="54.0" />
+                                    <Label fx:id="subTotal3" layoutX="90.0" layoutY="125.0" textFill="WHITE" AnchorPane.bottomAnchor="22.0" AnchorPane.leftAnchor="84.0" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="309.0" layoutY="141.0" style="-fx-background-color: #666666; -fx-background-radius: 15; -fx-border-radius: 15; -fx-border-color: white; -fx-border-width: 2;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <GridPane.margin>
+                                    <Insets />
+                                 </GridPane.margin>
+                                 <children>
+                                    <Label layoutX="22.0" prefHeight="93.0" prefWidth="129.0" style="-fx-font-size: 12;" text="Kiddie Combo (1 Pepsi,1 Welch's Fruit Snack, 1 Small PopCorn)" textFill="WHITE" wrapText="true" />
+                                    <Label layoutX="22.0" layoutY="76.0" prefHeight="17.0" prefWidth="58.0" style="-fx-font-size: 12;" text="RM 6.00" textFill="WHITE" />
+                                    <JFXTextField fx:id="textField2" alignment="CENTER" editable="false" layoutX="243.0" layoutY="121.0" prefHeight="31.0" prefWidth="27.0" style="-fx-text-fill: white;" text="0" unFocusColor="WHITE" AnchorPane.bottomAnchor="17.0" AnchorPane.rightAnchor="35.0" />
+                                    <StackPane blendMode="OVERLAY" layoutX="174.0" layoutY="15.0" prefHeight="96.0" prefWidth="102.0" style="-fx-background-color: white; -fx-background-radius: 10;" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="15.0">
+                                       <children>
+                                          <ImageView fitHeight="89.0" fitWidth="92.0" pickOnBounds="true">
+                                             <image>
+                                                <Image url="@../rsc/combo-kiddie.jpg" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                       </padding>
+                                    </StackPane>
+                                    <ImageView fx:id="btn2Down" fitHeight="12.0" fitWidth="15.0" layoutX="208.0" layoutY="130.0" onMouseClicked="#DecreaseCount" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="69.0" AnchorPane.topAnchor="128.0">
+                                       <image>
+                                          <Image url="@../rsc/arrow.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fx:id="btn2Up" fitHeight="12.0" fitWidth="15.0" layoutX="260.0" layoutY="132.0" onMouseClicked="#IncreaseCount" pickOnBounds="true" preserveRatio="true" rotate="180.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="128.0">
+                                       <image>
+                                          <Image url="@../rsc/arrow.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="rmText2" layoutX="35.0" layoutY="118.0" text="RM " textFill="WHITE" visible="false" AnchorPane.bottomAnchor="22.0" AnchorPane.leftAnchor="54.0" />
+                                    <Label fx:id="subTotal2" layoutX="86.0" layoutY="123.0" textFill="WHITE" AnchorPane.bottomAnchor="22.0" AnchorPane.leftAnchor="84.0" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="451.0" layoutY="136.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #666666; -fx-background-radius: 15; -fx-border-radius: 15; -fx-border-color: white; -fx-border-width: 2;" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                 <GridPane.margin>
+                                    <Insets />
+                                 </GridPane.margin>
+                                 <children>
+                                    <Label layoutX="16.0" layoutY="76.0" prefHeight="17.0" prefWidth="58.0" style="-fx-font-size: 12;" text="RM 9.00" textFill="WHITE" />
+                                    <Label layoutX="16.0" layoutY="17.0" prefHeight="52.0" prefWidth="113.0" style="-fx-font-size: 12;" text="Starburst Combo(1 Popcorn, coca cola and 1 big popcorn)" textFill="WHITE" wrapText="true" />
+                                    <JFXTextField fx:id="textField4" alignment="CENTER" editable="false" layoutX="242.0" layoutY="114.0" prefHeight="31.0" prefWidth="27.0" style="-fx-text-fill: white;" text="0" unFocusColor="WHITE" AnchorPane.bottomAnchor="17.0" AnchorPane.rightAnchor="35.0" />
+                                    <StackPane blendMode="OVERLAY" layoutX="173.0" layoutY="15.0" prefHeight="96.0" prefWidth="102.0" style="-fx-background-color: white; -fx-background-radius: 10;" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="15.0">
+                                       <children>
+                                          <ImageView fitHeight="89.0" fitWidth="92.0" pickOnBounds="true">
+                                             <image>
+                                                <Image url="@../rsc/combo2.jpg" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                       </padding>
+                                    </StackPane>
+                                    <ImageView fx:id="btn4Down" fitHeight="12.0" fitWidth="15.0" layoutX="209.0" layoutY="128.0" onMouseClicked="#DecreaseCount" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="69.0" AnchorPane.topAnchor="128.0">
+                                       <image>
+                                          <Image url="@../rsc/arrow.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fx:id="btn4Up" fitHeight="12.0" fitWidth="15.0" layoutX="259.0" layoutY="130.0" onMouseClicked="#IncreaseCount" pickOnBounds="true" preserveRatio="true" rotate="180.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="128.0">
+                                       <image>
+                                          <Image url="@../rsc/arrow.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="rmText4" layoutX="46.0" layoutY="127.0" text="RM " textFill="WHITE" visible="false" AnchorPane.bottomAnchor="22.0" AnchorPane.leftAnchor="54.0" />
+                                    <Label fx:id="subTotal4" layoutX="86.0" layoutY="124.0" textFill="WHITE" AnchorPane.bottomAnchor="22.0" AnchorPane.leftAnchor="84.0" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" />
+                           </padding>
+                        </GridPane>
+                     </center>
+                  </BorderPane>
+                  <ImageView fx:id="backButton" fitHeight="68.0" fitWidth="91.0" onMouseClicked="#BackToHome" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <image>
+                        <Image url="@../rsc/bookingPage/button_home.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

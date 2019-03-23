@@ -1,0 +1,3 @@
+.grid-pane:focused{
+    -fx-border-color:blue;
+}

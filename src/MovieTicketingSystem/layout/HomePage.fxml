@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.media.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.media.MediaView?>
+<?import javafx.scene.shape.Rectangle?>
+
+<BorderPane fx:id="basePane" prefHeight="719.0" prefWidth="1204.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MovieTicketingSystem.controllers.HomePageController">
+         <left>
+            <Pane fx:id="leftPane" prefWidth="400.0" style="-fx-background-color: #59C7C6;" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fx:id="logo" fitHeight="75.0" fitWidth="256.0" layoutX="72.0" layoutY="159.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../rsc/dasKino.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="sloganText1" layoutX="99.0" layoutY="278.0" prefHeight="21.0" prefWidth="202.0" style="-fx-font-weight: bold; -fx-font-size: 15; -fx-alignment: center;" stylesheets="@../stylesheets/fontStyle.css" text="We commited to bring you" textFill="WHITE" />
+                  <Label fx:id="sloganText2" layoutX="119.0" layoutY="307.0" prefHeight="21.0" prefWidth="162.0" style="-fx-font-weight: bold; -fx-font-size: 15; -fx-alignment: center;" stylesheets="@../stylesheets/fontStyle.css" text="the best experience" textFill="WHITE" />
+            <AnchorPane fx:id="showTimePane" layoutX="-412.0" layoutY="-11.0" prefHeight="730.0" prefWidth="374.0">
+               <children>
+                  <AnchorPane fx:id="showTimeDisplay" layoutX="-102.0" layoutY="-8.0" prefHeight="738.0" prefWidth="416.0" style="-fx-background-color: #4059A9;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-102.0" AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="-8.0">
+                     <children>
+                        <JFXComboBox fx:id="cinemaComboBox" focusColor="#59c7c6" labelFloat="true" layoutX="117.0" layoutY="96.0" prefHeight="31.0" prefWidth="235.0" promptText="Choose Your Cinema" style="-fx-prompt-text-fill: white; -fx-text-fill: white;" stylesheets="@../stylesheets/comboBoxStyle.css" unFocusColor="WHITE" />
+                        <JFXButton fx:id="bookTicketButton" buttonType="RAISED" disable="true" layoutX="117.0" layoutY="369.0" prefHeight="53.0" prefWidth="149.0" style="-fx-background-color: #59C7C6;" text="Book Your Ticket" textFill="WHITE" />
+                        <Label fx:id="bookingPromptText" layoutX="117.0" layoutY="297.0" prefHeight="63.0" prefWidth="275.0" textFill="#7c0606" wrapText="true" />
+                        <Pane layoutX="92.0" layoutY="448.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #242E44; -fx-background-radius: 10;">
+                           <children>
+                              <Label layoutX="21.0" layoutY="124.0" prefHeight="50.0" prefWidth="158.0" style="-fx-font-size: 10;" text="dasKino operates from 10a.m to 2a.m" textFill="WHITE" wrapText="true" />
+                              <Label layoutX="22.0" layoutY="37.0" prefHeight="50.0" prefWidth="164.0" style="-fx-font-size: 10;" text="User  is able to pre-book ticket 7 days prior to the date showing" textFill="WHITE" wrapText="true" />
+                           </children>
+                           <effect>
+                              <InnerShadow />
+                           </effect>
+                        </Pane>
+                     </children></AnchorPane>
+                  <ImageView fx:id="chooseTimeButton" fitHeight="150.0" fitWidth="72.0" layoutX="299.0" layoutY="248.0" onMouseEntered="#ScaleUpButton" onMouseExited="#ScaleDownButton" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="332.0" AnchorPane.leftAnchor="299.0" AnchorPane.rightAnchor="3.0" />
+               </children>
+            </AnchorPane>
+            <Pane fx:id="descriptionBox" layoutX="24.0" layoutY="730.0" prefHeight="255.0" prefWidth="348.0" style="-fx-background-color: #242E44; -fx-border-radius: 10 10 10 10; -fx-background-radius: 10;">
+               <effect>
+                  <InnerShadow choke="0.09" height="27.22" radius="17.775" width="45.88" />
+               </effect>
+               <children>
+                  <Label fx:id="movieDescription" layoutX="16.0" layoutY="17.0" prefHeight="219.0" prefWidth="316.0" textFill="WHITE" wrapText="true" />
+               </children>
+            </Pane>
+               </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+            </Pane>
+         </left>
+   <center>
+      <AnchorPane fx:id="centerAnchorPane" prefHeight="736.0" prefWidth="866.0" style="-fx-background-color: #242E44;" BorderPane.alignment="CENTER">
+         <children>
+                  <ImageView fx:id="dragonImage" fitHeight="253.0" fitWidth="182.0" layoutX="76.0" layoutY="31.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@../rsc/JurassicWorld.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="incredibleImage" fitHeight="253.0" fitWidth="182.0" layoutX="348.0" layoutY="31.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@../rsc/The_Incredibles_2.jpg" />
+                     </image>
+                  </ImageView>
+            <ImageView fitHeight="55.0" fitWidth="97.0" layoutX="698.0" layoutY="19.0" onMouseClicked="#CloseWindow" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../rsc/accountPage/button_cancel.png" />
+               </image>
+            </ImageView>
+            <Circle fill="WHITE" layoutX="693.0" layoutY="47.0" radius="20.0" stroke="WHITE" strokeType="INSIDE" />
+            <ImageView fx:id="rampageImage" fitHeight="253.0" fitWidth="182.0" layoutX="76.0" layoutY="387.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../rsc/rampage.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="deadPool2Image" fitHeight="253.0" fitWidth="182.0" layoutX="348.0" layoutY="387.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../rsc/deadpool2.jpg" />
+               </image>
+            </ImageView>
+            <JFXButton buttonType="RAISED" layoutX="626.0" layoutY="83.0" onAction="#playMusicButton" style="-fx-background-color: #242E44;" text="Stop/Play Music" textFill="WHITE">
+               <effect>
+                  <DropShadow />
+               </effect>
+            </JFXButton>
+                  <JFXNodesList fx:id="hamburgerNodeList" layoutX="680.0" layoutY="39.0">
+               <children>
+                  <JFXHamburger fx:id="hamburgerNode" prefHeight="17.0" prefWidth="26.0" stylesheets="@../stylesheets/hamburgerStyle.css" />
+                  <ImageView fitHeight="52.0" fitWidth="54.0" layoutX="-4.0" layoutY="27.0" onMouseClicked="#changeToPromotionPage" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../rsc/mainPage/events.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="contactUsButton" fitHeight="52.0" fitWidth="54.0" layoutX="-4.0" layoutY="131.0" onMouseClicked="#ContactUsButtonClicked" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../rsc/mainPage/contactUs.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="52.0" fitWidth="54.0" layoutX="6.0" layoutY="37.0" onMouseClicked="#EnterFaqPage" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../rsc/mainPage/faq.png" />
+                     </image>
+                  </ImageView>
+               </children></JFXNodesList>
+            <JFXNodesList fx:id="hamburgerNodeList1" layoutX="619.0" layoutY="22.0">
+               <children>
+                        <ImageView fitHeight="52.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../rsc/mainPage/profileIcon.png" />
+                           </image>
+                        </ImageView>
+                  <ImageView fx:id="manageBookingButton" fitHeight="52.0" fitWidth="54.0" layoutX="-4.0" layoutY="27.0" onMouseClicked="#ManageBookingButtonOnClicked" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../rsc/mainPage/booking.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="52.0" fitWidth="54.0" onMouseClicked="#LinkToAccountSetting" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../rsc/mainPage/setting.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="logOutButton" fitHeight="52.0" fitWidth="54.0" layoutX="-4.0" layoutY="27.0" onMouseClicked="#LogOut" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../rsc/mainPage/logout.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </JFXNodesList>
+                  <Label layoutX="366.0" layoutY="296.0" style="-fx-font-size: 28;" stylesheets="@../stylesheets/fontStyle.css" text="Incredible 2" textFill="WHITE" />
+            <Label layoutX="366.0" layoutY="648.0" style="-fx-font-size: 28;" text="Deadpool 2" textFill="WHITE" />
+            <Label layoutX="80.0" layoutY="648.0" style="-fx-font-size: 28;" text="The Rampage" textFill="WHITE" />
+                  <Label layoutX="80.0" layoutY="296.0" style="-fx-font-size: 28;" stylesheets="@../stylesheets/fontStyle.css" text="Jurrasic World" textFill="WHITE" />
+            <Label layoutX="103.0" layoutY="338.0" stylesheets="@../stylesheets/fontStyle.css" text="The fallen kingdom" textFill="WHITE" />
+         </children>
+         <padding>
+            <Insets right="10.0" top="10.0" />
+         </padding>
+         <effect>
+            <DropShadow radius="16.997500000000002" width="48.99" />
+         </effect>
+      </AnchorPane>
+   </center>
+      </BorderPane>

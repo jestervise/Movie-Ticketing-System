@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="basePane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #242E44; -fx-border-color: #FFFFFF; -fx-border-width: 3;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MovieTicketingSystem.controllers.FaqPageController">
+   <children>
+      <Pane layoutX="54.0" layoutY="24.0" style="-fx-background-color: #4059A9; -fx-background-radius: 10 10 0 0;">
+         <children>
+            <Label style="-fx-font-size: 32; -fx-font-weight: bold;" text="FAQ" textAlignment="CENTER" textFill="WHITE">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <effect>
+                  <InnerShadow choke="0.01" color="#0e046b" height="10.0" radius="4.5" width="10.0" />
+               </effect>
+            </Label>
+         </children>
+         <effect>
+            <DropShadow height="17.89" offsetY="2.0" radius="5.335" width="5.45" />
+         </effect>
+      </Pane>
+      <AnchorPane layoutX="36.0" layoutY="91.0" prefHeight="284.0" prefWidth="521.0" style="-fx-background-color: #242E44; -fx-background-radius: 10;">
+         <children>
+            <Label layoutX="6.0" layoutY="7.0" prefHeight="49.0" prefWidth="521.0" style="-fx-font-size: 25;" text="Frequently Asked Question" textAlignment="CENTER" textFill="WHITE" wrapText="true" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding></Label>
+            <ScrollPane hbarPolicy="NEVER" layoutY="44.0" prefHeight="240.0" prefWidth="521.0" style="-fx-background-color: #242E44; -fx-border-color: #242E44;" stylesheets="@../stylesheets/scrollPaneStyle.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="44.0">
+               <content>
+                  <Label lineSpacing="5.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="604.0" prefWidth="520.0" style="-fx-font-size: 20; -fx-background-color: #242E44;" text="How does dasKino protect my privacy and keep my information secure? We know security and privacy are important to you – and they are important to us, too. We make it a priority to provide strong security and give you confidence that your information is safe and accessible when you need it.We’re constantly working to ensure strong security, protect your privacy, and make dasKino even more effective and efficient for you. We spend hundreds of millions of dollars every year on security, and employ world-renowned experts in data security to keep your information safe. We also built easy-to-use privacy and security tools like dasKino Dashboard, 2-step verification and Ads Settings. So when it comes to the information you share with dasKino,you’re in control.You can learn more about safety and security online, including how to protect yourself and your family online, at the Google Safety Center.Learn more about how we keep your personal information private and safe — and put you in control." textFill="WHITE" wrapText="true">
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                     <effect>
+                        <InnerShadow />
+                     </effect>
+                  </Label>
+               </content>
+            </ScrollPane>
+         </children>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </AnchorPane>
+      <ImageView fitHeight="49.0" fitWidth="88.0" layoutX="514.0" layoutY="14.0" onMouseClicked="#CloseWindow" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="10.0">
+         <image>
+            <Image url="@../rsc/accountPage/button_cancel.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

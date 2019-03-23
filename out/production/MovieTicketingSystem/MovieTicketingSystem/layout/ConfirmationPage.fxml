@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+
+<AnchorPane fx:id="basePane" prefHeight="669.0" prefWidth="972.0" style="-fx-background-color: #242E44;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MovieTicketingSystem.controllers.ConfirmationPageController">
+   <children>
+      <SplitPane fx:id="splitPane" dividerPositions="0.29799764428739695" prefHeight="160.0" prefWidth="200.0" style="-fx-background-color: #242E44;" stylesheets="@../stylesheets/splitPaneStyle.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="398.0" prefWidth="240.0">
+               <children>
+                  <Label alignment="CENTER" layoutX="93.0" layoutY="88.0" onMouseClicked="#ChangeToSelectSeatScene" style="-fx-font-size: 20;" text="SELECT SEAT" textAlignment="CENTER" textFill="WHITE" />
+                  <Label fx:id="selectTicketText" alignment="CENTER" layoutX="93.0" layoutY="201.0" onMouseClicked="#BackToSelectTicketPage" style="-fx-font-size: 20;" text="SELECT TICKET" textAlignment="CENTER" textFill="WHITE" />
+                  <ImageView fitHeight="68.0" fitWidth="78.0" layoutX="13.0" layoutY="69.0" onMouseClicked="#ChangeToSelectSeatScene" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="13.0" AnchorPane.topAnchor="69.0">
+                     <image>
+                        <Image url="@../rsc/bookingPage/select_seat_normal.png" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="CENTER" layoutX="94.0" layoutY="319.0" style="-fx-font-size: 20;" text="ADD-ONS" textAlignment="CENTER" textFill="WHITE" />
+                  <Label alignment="CENTER" layoutX="97.0" layoutY="432.0" style="-fx-font-size: 20;" text="PAYMENT" textAlignment="CENTER" textFill="WHITE" />
+                  <Label alignment="CENTER" layoutX="95.0" layoutY="539.0" style="-fx-font-size: 20;" text="CONFIRMATION" textAlignment="CENTER" textFill="#4059a9" />
+                  <ImageView fitHeight="68.0" fitWidth="16.0" layoutX="135.0" layoutY="121.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../rsc/bookingPage/line_normal.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="selectTicketIcon" fitHeight="68.0" fitWidth="78.0" layoutX="14.0" layoutY="182.0" onMouseClicked="#BackToSelectTicketPage" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../rsc/bookingPage/select_ticket_normal.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="68.0" fitWidth="78.0" layoutX="14.0" layoutY="300.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../rsc/bookingPage/addons_normal.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="68.0" fitWidth="78.0" layoutX="14.0" layoutY="413.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../rsc/bookingPage/payment_normal.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="68.0" fitWidth="78.0" layoutX="14.0" layoutY="520.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../rsc/bookingPage/confirmation_selected.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="68.0" fitWidth="16.0" layoutX="134.0" layoutY="238.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../rsc/bookingPage/line_normal.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="68.0" fitWidth="16.0" layoutX="135.0" layoutY="356.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../rsc/bookingPage/line_normal.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="68.0" fitWidth="16.0" layoutX="135.0" layoutY="463.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../rsc/bookingPage/line_normal.png" />
+                     </image>
+                  </ImageView>
+               </children></AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="398.0" prefWidth="330.0">
+               <children>
+                  <VBox fx:id="bottomPane" layoutY="120.0" prefHeight="497.0" prefWidth="587.0" spacing="5.0">
+                     <children>
+                        <VBox prefHeight="55.0" prefWidth="501.0">
+                           <children>
+                              <Label fx:id="movieText" style="-fx-font-weight: bold; -fx-font-size: 20;" text="INCREDIBLE 2" textFill="WHITE" />
+                              <HBox prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <Label text="Showing On " textFill="WHITE" />
+                                    <Label fx:id="cinemaText" layoutX="10.0" layoutY="10.0" textFill="WHITE" />
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="20.0" layoutY="40.0" prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <Label text="dasKino" textFill="WHITE" />
+                                    <Label layoutX="10.0" layoutY="10.0" textFill="WHITE" />
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="5.0" />
+                                 </padding>
+                              </HBox>
+                           </children>
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </VBox>
+                        <GridPane fx:id="showOrderPane" prefHeight="352.0" prefWidth="587.0" style="-fx-background-color: #666666; -fx-background-radius: 10; -fx-border-radius: 10; -fx-border-color: white;">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints maxHeight="35.0" minHeight="10.0" prefHeight="24.0" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="62.0" minHeight="10.0" prefHeight="54.0" valignment="CENTER" vgrow="SOMETIMES" />
+                              <RowConstraints valignment="CENTER" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                            <RowConstraints vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+
+      
+                                  <Label fx:id="yourOrderText" style="-fx-font-weight: bold;" text="YOUR ORDER" textFill="WHITE" />
+                              <AnchorPane GridPane.columnSpan="2" GridPane.rowIndex="1">
+                                 <children>
+                                           <ScrollPane hbarPolicy="NEVER" style="-fx-background-color: #666666; -fx-border-color: transparent;" stylesheets="@../stylesheets/scrollPaneStyle.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <content>
+                                        <GridPane fx:id="bottomGrid" alignment="CENTER" prefWidth="555.0" style="-fx-background-color: #666666; -fx-border-color: transparent;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                            <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                          <children>
+                                             <Label fx:id="movieText2" style="-fx-font-size: 15;" text="incredible 2" textAlignment="CENTER" textFill="WHITE" wrapText="true" GridPane.halignment="LEFT" GridPane.rowSpan="2" GridPane.valignment="CENTER" />
+                                             <Label layoutX="11.0" layoutY="16.0" style="-fx-font-size: 15;" text="SEAT" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowSpan="2" />
+                                                <Label fx:id="seatText" layoutX="177.0" layoutY="46.0" style="-fx-font-size: 15;" textFill="WHITE" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowSpan="2" GridPane.vgrow="ALWAYS" />
+                                                <Label fx:id="ticketPrice" layoutX="176.0" layoutY="46.0" style="-fx-font-size: 15;" text="incredible 2" textFill="WHITE" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowSpan="2" GridPane.valignment="CENTER" />
+                                                <Label fx:id="seatText" layoutX="150.0" layoutY="31.0" style="-fx-font-size: 15;" text="SEAT" textAlignment="CENTER" textFill="WHITE" wrapText="true" GridPane.columnIndex="2" GridPane.rowSpan="2" />
+                                          </children>
+                                        </GridPane>
+                                       </content>
+                                           </ScrollPane>
+                                 </children>
+                              </AnchorPane>
+                              <VBox GridPane.rowIndex="4">
+                                 <children>
+                                    <Line fx:id="line" endX="570.0" stroke="WHITE" strokeWidth="2.0" />
+                                    <Label prefHeight="21.0" prefWidth="261.0" style="-fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 12;" text="TOTAL(INCLUDING BOOKING FEES)">
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin></Label>
+                                 </children>
+                              </VBox>
+                              <Label fx:id="totalAmount" layoutX="21.0" layoutY="59.0" style="-fx-text-fill: white; -fx-font-weight: bold;" text="RM" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                                 <padding>
+                                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                 </padding>
+                              </Label>
+                              <Label text="Payment Method" textFill="WHITE" GridPane.rowIndex="2" />
+                              <Label text="Booking Fees" textFill="WHITE" GridPane.rowIndex="3" />
+                              <Label layoutX="21.0" layoutY="220.0" text="RM 2.0" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                              <Label fx:id="paymentMethod" layoutX="21.0" layoutY="137.0" text="Payment Method" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <Label layoutX="557.0" layoutY="303.0" style="-fx-text-fill: white; -fx-font-weight: bold;" text="RM">
+                                 <padding>
+                                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                 </padding>
+                              </Label>
+                           </children>
+                           <padding>
+                              <Insets bottom="5.0" left="10.0" right="10.0" />
+                           </padding>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </GridPane>
+                        <AnchorPane>
+                           <children>
+                              <ImageView fx:id="nextButton" fitHeight="46.0" fitWidth="110.0" onMouseClicked="#NextPage" onMouseEntered="#ScaleUpButton" onMouseExited="#ScaleDownButton" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="-12.0" AnchorPane.rightAnchor="0.0">
+                                 <image>
+                                    <Image url="@../rsc/button_next.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                     <padding>
+                        <Insets top="5.0" />
+                     </padding>
+                  </VBox>
+                  <ImageView fx:id="backButton" fitHeight="68.0" fitWidth="91.0" onMouseClicked="#BackToHome" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <image>
+                        <Image url="@../rsc/bookingPage/button_home.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,11 @@
+ .combo-box .arrow-button{
+     -fx-background-color: transparent;
+}
+.combo-box .arrow{
+     -fx-background-color: white;
+}
+
+.combo-box .cell{
+    -fx-text-fill:#59C7C6;
+    -fx-font: 16px "Arial";
+}

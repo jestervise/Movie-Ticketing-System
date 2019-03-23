@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="basePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" style="-fx-background-color: #242E44; -fx-border-color: #FFFFFF; -fx-border-width: 3;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MovieTicketingSystem.controllers.AccountProfileController">
+   <children>
+      <ImageView fx:id="closeButton" fitHeight="56.0" fitWidth="82.0" layoutX="561.0" layoutY="14.0" onMouseClicked="#CloseWindow" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="10.0">
+         <image>
+            <Image url="@../rsc/accountPage/button_cancel.png" />
+         </image>
+      </ImageView>
+      <AnchorPane fx:id="redeemCodePane" layoutX="113.0" layoutY="57.0" prefHeight="146.0" prefWidth="272.0" style="-fx-background-color: white; -fx-background-radius: 10;">
+         <children>
+            <JFXTextField fx:id="redeemCodeTextField" focusColor="#5576da" layoutX="70.0" layoutY="61.0" onAction="#ShowPrompt" prefHeight="31.0" prefWidth="151.0" style="-fx-text-fill: #4059A9;" unFocusColor="#1c8ce1" />
+            <Label layoutX="75.0" layoutY="34.0" text="Enter Code Number" textFill="#3e72cd" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="42.0" layoutY="45.0" style="-fx-background-color: #4059A9; -fx-background-radius: 18 18 18 18;" AnchorPane.leftAnchor="42.0" AnchorPane.topAnchor="45.0">
+         <children>
+            <HBox>
+               <children>
+                  <VBox prefHeight="0.0" prefWidth="262.0" spacing="5.0">
+                     <children>
+                        <HBox spacing="10.0">
+                           <children>
+                              <Label style="-fx-font-weight: bold; -fx-font-size: 32;" stylesheets="@../stylesheets/fontStyle.css" text="Name:" textFill="WHITE" />
+                              <JFXTextField fx:id="nameTextField" editable="false" prefHeight="55.0" prefWidth="159.0" style="-fx-font-size: 20; -fx-text-fill: white;" unFocusColor="#4059a9" />
+                           </children>
+                        </HBox>
+                        <Label style="-fx-font-size: 15; -fx-font-weight: lighter;" stylesheets="@../stylesheets/fontStyle.css" text="Acount ID:" textFill="WHITE" />
+                        <Label stylesheets="@../stylesheets/fontStyle.css" text="Last Login At" textFill="WHITE" />
+                        <HBox spacing="66.0">
+                           <children>
+                              <Label style="-fx-font-weight: bold;" stylesheets="@../stylesheets/fontStyle.css" text="REDEEM CODE" textFill="WHITE">
+                                 <padding>
+                                    <Insets top="10.0" />
+                                 </padding>
+                              </Label>
+                              <ImageView fx:id="redeemCodeButton" fitHeight="46.0" fitWidth="96.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../rsc/button_next.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </HBox>
+                        <HBox layoutX="10.0" layoutY="114.0" spacing="20.0" />
+                     </children>
+                  </VBox>
+                  <ImageView fx:id="editButton" fitHeight="55.0" fitWidth="70.0" onMouseClicked="#ChangeName" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../rsc/accountPage/pencil_edit.png" />
+                     </image>
+                  </ImageView>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </HBox>
+         </children>
+         <effect>
+            <DropShadow color="#050811" height="34.21" offsetY="4.0" radius="8.0525" width="0.0" />
+         </effect>
+      </AnchorPane>
+      <AnchorPane layoutX="32.0" layoutY="239.0" prefHeight="187.0" prefWidth="567.0" AnchorPane.bottomAnchor="54.0" AnchorPane.leftAnchor="32.0" AnchorPane.rightAnchor="41.0">
+         <effect>
+            <DropShadow offsetY="3.0" radius="4.75" width="0.0" />
+         </effect>
+         <children>
+            <JFXButton fx:id="manageBookingButton" buttonType="RAISED" onAction="#goToManageBookingPage" prefHeight="39.0" prefWidth="158.0" ripplerFill="#3babd7" style="-fx-background-color: #4059A9;" text="MANAGE BOOKING" textAlignment="CENTER" textFill="WHITE" wrapText="true" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="33.0" layoutY="240.0" prefHeight="146.0" prefWidth="535.0" style="-fx-background-radius: 10; -fx-background-color: white;" AnchorPane.bottomAnchor="94.0" AnchorPane.leftAnchor="33.0" AnchorPane.rightAnchor="32.0">
+         <children>
+            <TableView fx:id="table" layoutX="4.0" layoutY="7.0" prefHeight="147.0" prefWidth="526.0" stylesheets="@../stylesheets/tableStyle.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <columns>
+                <TableColumn prefWidth="-1.0" text="C1" />
+                <TableColumn prefWidth="-1.0" text="C2" />
+              </columns>
+            </TableView>
+         </children>
+         <effect>
+            <DropShadow offsetY="3.0" radius="4.75" width="0.0" />
+         </effect>
+      </AnchorPane>
+   </children>
+</AnchorPane>

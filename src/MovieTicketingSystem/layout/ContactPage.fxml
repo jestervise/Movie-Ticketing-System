@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="basePane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #242E44; -fx-border-color: #FFFFFF; -fx-border-width: 3;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MovieTicketingSystem.controllers.ContactPageController">
+   <children>
+      <Pane layoutX="36.0" layoutY="24.0" style="-fx-background-color: #4059A9; -fx-background-radius: 10 10 0 0;">
+         <children>
+            <Label style="-fx-font-size: 32; -fx-font-weight: bold;" text="Contact Us" textAlignment="CENTER" textFill="WHITE">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <effect>
+                  <InnerShadow choke="0.01" color="#0e046b" height="10.0" radius="4.5" width="10.0" />
+               </effect>
+            </Label>
+         </children>
+         <effect>
+            <DropShadow height="17.89" offsetY="2.0" radius="5.335" width="5.45" />
+         </effect>
+      </Pane>
+      <AnchorPane layoutX="36.0" layoutY="91.0" prefHeight="284.0" prefWidth="521.0" style="-fx-background-color: #242E44;">
+         <children>
+            <Label prefHeight="244.0" prefWidth="259.0" style="-fx-font-size: 20;" text="0327960 Chang Ming Jun 0327710 Chew Tzee Wen 0327917 Yee Mun Kin 0327763 Chong Kean Wai 0327976 Lau Mun Hong" textFill="WHITE" wrapText="true" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0" />
+         </children>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </AnchorPane>
+      <ImageView fitHeight="49.0" fitWidth="88.0" layoutX="514.0" layoutY="14.0" onMouseClicked="#CloseWindow" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="10.0">
+         <image>
+            <Image url="@../rsc/accountPage/button_cancel.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

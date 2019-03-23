@@ -1,0 +1,1120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="basePane" prefHeight="669.0" prefWidth="972.0" style="-fx-background-color: #242E44;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MovieTicketingSystem.controllers.BookingPageController">
+   <children>
+      <SplitPane fx:id="splitPane" dividerPositions="0.29799764428739695" prefHeight="160.0" prefWidth="200.0" style="-fx-background-color: #242E44;" stylesheets="@../stylesheets/splitPaneStyle.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="398.0" prefWidth="240.0">
+               <children>
+                  <Label alignment="CENTER" layoutX="93.0" layoutY="88.0" style="-fx-font-size: 20;" text="SELECT SEAT" textAlignment="CENTER" textFill="#4059a9" />
+                  <Label fx:id="selectTicketText" alignment="CENTER" layoutX="93.0" layoutY="201.0" style="-fx-font-size: 20;" text="SELECT TICKET" textAlignment="CENTER" textFill="WHITE" />
+                  <ImageView fitHeight="68.0" fitWidth="78.0" layoutX="13.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="13.0" AnchorPane.topAnchor="69.0">
+                     <image>
+                        <Image url="@../rsc/bookingPage/select_seat_selected.png" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="CENTER" layoutX="94.0" layoutY="319.0" style="-fx-font-size: 20;" text="ADD-ONS" textAlignment="CENTER" textFill="WHITE" />
+                  <Label alignment="CENTER" layoutX="97.0" layoutY="432.0" style="-fx-font-size: 20;" text="PAYMENT" textAlignment="CENTER" textFill="WHITE" />
+                  <Label alignment="CENTER" layoutX="95.0" layoutY="539.0" style="-fx-font-size: 20;" text="CONFIRMATION" textAlignment="CENTER" textFill="WHITE" />
+                  <ImageView fitHeight="68.0" fitWidth="16.0" layoutX="135.0" layoutY="121.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../rsc/bookingPage/line_normal.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="selectTicketIcon" fitHeight="68.0" fitWidth="78.0" layoutX="14.0" layoutY="182.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../rsc/bookingPage/select_ticket_normal.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="68.0" fitWidth="78.0" layoutX="14.0" layoutY="300.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../rsc/bookingPage/addons_normal.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="68.0" fitWidth="78.0" layoutX="14.0" layoutY="413.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../rsc/bookingPage/payment_normal.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="68.0" fitWidth="78.0" layoutX="14.0" layoutY="520.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../rsc/bookingPage/confirmation_normal.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="68.0" fitWidth="16.0" layoutX="134.0" layoutY="238.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../rsc/bookingPage/line_normal.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="68.0" fitWidth="16.0" layoutX="135.0" layoutY="356.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../rsc/bookingPage/line_normal.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="68.0" fitWidth="16.0" layoutX="135.0" layoutY="463.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../rsc/bookingPage/line_normal.png" />
+                     </image>
+                  </ImageView>
+               </children></AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="398.0" prefWidth="330.0">
+               <children>
+                  <BorderPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="10.0">
+                     <left>
+                        <VBox prefHeight="378.0" prefWidth="94.0" spacing="10.0" style="-fx-background-color: white; -fx-background-radius: 10;" BorderPane.alignment="CENTER">
+                           <children>
+                              <ImageView fitHeight="42.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_selected.png" />
+                                 </image>
+                              </ImageView>
+                              <Label prefHeight="15.0" prefWidth="58.0" style="-fx-font-size: 10; -fx-font-weight: bold;" text="YOUR SEAT" textFill="#666666" />
+                              <ImageView fitHeight="42.0" fitWidth="42.0" layoutX="30.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_available.png" />
+                                 </image>
+                              </ImageView>
+                              <Label layoutX="30.0" layoutY="72.0" prefHeight="15.0" prefWidth="58.0" style="-fx-font-size: 10; -fx-font-weight: bold;" text="AVAILABLE" textFill="#666666" />
+                              <ImageView fitHeight="42.0" fitWidth="42.0" layoutX="30.0" layoutY="58.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_sold.png" />
+                                 </image>
+                              </ImageView>
+                              <Label layoutX="30.0" layoutY="129.0" prefHeight="15.0" prefWidth="51.0" style="-fx-font-size: 10; -fx-font-weight: bold;" text="   SOLD" textAlignment="CENTER" textFill="#666666" />
+                              <ImageView fitHeight="42.0" fitWidth="42.0" layoutX="30.0" layoutY="86.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_twin_available.png" />
+                                 </image>
+                              </ImageView>
+                              <Label layoutX="30.0" layoutY="186.0" prefHeight="15.0" prefWidth="71.0" style="-fx-font-size: 10; -fx-font-weight: bold;" text="TWIN SEAT" textAlignment="CENTER" textFill="#666666" />
+                           </children>
+                           <padding>
+                              <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                           </padding></VBox>
+                     </left>
+                     <bottom>
+                        <VBox fx:id="bottomPane" prefHeight="172.0" prefWidth="501.0" spacing="5.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <GridPane fx:id="showOrderPane" prefHeight="154.0" prefWidth="501.0" style="-fx-background-color: #666666; -fx-background-radius: 10; -fx-border-radius: 10; -fx-border-color: white;">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints maxHeight="35.0" minHeight="10.0" prefHeight="24.0" vgrow="SOMETIMES" />
+                                  <RowConstraints maxHeight="62.0" minHeight="10.0" prefHeight="54.0" valignment="CENTER" vgrow="SOMETIMES" />
+                                    <RowConstraints valignment="CENTER" vgrow="SOMETIMES" />
+                                  <RowConstraints vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+      
+      
+                                        <Label fx:id="yourOrderText" style="-fx-font-weight: bold;" text="YOUR ORDER" textFill="WHITE" />
+                                    <AnchorPane GridPane.columnSpan="2" GridPane.rowIndex="1">
+                                       <children>
+                                                 <ScrollPane hbarPolicy="NEVER" style="-fx-background-color: #666666; -fx-border-color: transparent;" stylesheets="@../stylesheets/scrollPaneStyle.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <content>
+                                              <GridPane fx:id="bottomGrid" alignment="CENTER" prefWidth="555.0" style="-fx-background-color: #666666; -fx-border-color: transparent;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                  <columnConstraints>
+                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                  </columnConstraints>
+                                                  <rowConstraints>
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                  </rowConstraints>
+                                                <children>
+                                                   <Label fx:id="movieText2" prefHeight="249.0" prefWidth="139.0" style="-fx-font-size: 15;" text="incredible 2" textAlignment="CENTER" textFill="WHITE" wrapText="true" GridPane.halignment="LEFT" GridPane.rowSpan="2" GridPane.valignment="CENTER" />
+                                                   <Label layoutX="11.0" layoutY="16.0" style="-fx-font-size: 15;" text="SEAT" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowSpan="2" />
+                                                   <Label layoutX="179.0" layoutY="16.0" style="-fx-font-size: 15;" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                                                      <Label fx:id="seatText" layoutX="177.0" layoutY="46.0" style="-fx-font-size: 15;" textFill="WHITE" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowSpan="2" GridPane.vgrow="ALWAYS" />
+                                                      <Label layoutX="176.0" layoutY="46.0" prefHeight="48.0" prefWidth="129.0" style="-fx-font-size: 15;" text="RM 0" textFill="WHITE" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowSpan="2" GridPane.valignment="CENTER" />
+                                                </children>
+                                              </GridPane>
+                                             </content>
+                                                 </ScrollPane>
+                                       </children>
+                                    </AnchorPane>
+                                    <VBox GridPane.rowIndex="3">
+                                       <children>
+                                          <Line fx:id="line" endX="570.0" stroke="WHITE" strokeWidth="2.0" />
+                                          <Label prefHeight="21.0" prefWidth="261.0" style="-fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 12;" text="TOTAL(EXCLUDING BOOKING FEES)" />
+                                       </children>
+                                    </VBox>
+                                    <Label layoutX="21.0" layoutY="59.0" style="-fx-text-fill: white; -fx-font-weight: bold;" text="RM" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="3">
+                                       <padding>
+                                          <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                       </padding>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="5.0" left="10.0" right="10.0" />
+                                 </padding>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </GridPane>
+                              <AnchorPane>
+                                 <children>
+                                    <ImageView fx:id="nextButton" disable="true" fitHeight="46.0" fitWidth="110.0" onMouseEntered="#ScaleUpButton" onMouseExited="#ScaleDownButton" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="-12.0" AnchorPane.rightAnchor="0.0">
+                                       <image>
+                                          <Image url="@../rsc/button_next.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                           <padding>
+                              <Insets top="5.0" />
+                           </padding>
+                        </VBox>
+                     </bottom>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                     <top>
+                        <VBox prefHeight="55.0" prefWidth="501.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <Label fx:id="movieText" style="-fx-font-weight: bold; -fx-font-size: 20;" text="INCREDIBLE 2" textFill="WHITE" />
+                              <HBox prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <Label text="Showing On " textFill="WHITE" />
+                                    <Label fx:id="cinemaText" layoutX="10.0" layoutY="10.0" textFill="WHITE" />
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="20.0" layoutY="40.0" prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <Label text="dasKino" textFill="WHITE" />
+                                    <Label layoutX="10.0" layoutY="10.0" textFill="WHITE" />
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="5.0" />
+                                 </padding>
+                              </HBox>
+                           </children>
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </VBox>
+                     </top>
+                     <center>
+                        <GridPane fx:id="chooseSeatGrid" prefHeight="378.0" prefWidth="490.0" style="-fx-background-color: white; -fx-background-radius: 10;" BorderPane.alignment="CENTER">
+                          <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <ImageView fitHeight="21.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="5">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_available.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="testLabel" text="A" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                              <Label layoutX="12.0" layoutY="82.0" text="B" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                              <Label layoutX="12.0" layoutY="105.0" text="C" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                              <Label layoutX="12.0" layoutY="82.0" text="D" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                              <Label layoutX="12.0" layoutY="82.0" text="E" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                              <Label layoutX="12.0" layoutY="82.0" text="F" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+                              <Label layoutX="12.0" layoutY="82.0" text="G" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+                              <Label layoutX="12.0" layoutY="220.0" text="H" GridPane.columnIndex="1" GridPane.rowIndex="11" />
+                              <Label layoutX="12.0" layoutY="220.0" text="J" GridPane.columnIndex="1" GridPane.rowIndex="12" />
+                              <Label layoutX="12.0" layoutY="82.0" text="K" GridPane.columnIndex="1" GridPane.rowIndex="13" />
+                              <Label alignment="CENTER" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="1" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+                              <ImageView fitHeight="21.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="5">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="21.0" fitWidth="20.0" layoutX="50.0" layoutY="106.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="6">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="21.0" fitWidth="20.0" layoutX="50.0" layoutY="106.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="6">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_available.png" />
+                                 </image>
+                              </ImageView>
+                              <Label alignment="CENTER" layoutX="31.0" layoutY="108.0" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="2" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+                              <Label alignment="CENTER" layoutX="31.0" layoutY="108.0" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="1" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+                              <Label alignment="CENTER" layoutX="50.0" layoutY="108.0" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="2" GridPane.columnIndex="4" GridPane.rowIndex="6" />
+                              <ImageView fitHeight="21.0" fitWidth="20.0" layoutX="31.0" layoutY="129.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="7">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="21.0" fitWidth="20.0" layoutX="50.0" layoutY="129.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="8">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="21.0" fitWidth="20.0" layoutX="50.0" layoutY="106.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="9">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="21.0" fitWidth="20.0" layoutX="50.0" layoutY="106.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="10">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="21.0" fitWidth="20.0" layoutX="50.0" layoutY="106.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="11">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="21.0" fitWidth="20.0" layoutX="50.0" layoutY="106.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="11">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="21.0" fitWidth="20.0" layoutX="50.0" layoutY="106.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="10">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="21.0" fitWidth="20.0" layoutX="50.0" layoutY="106.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="9">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="21.0" fitWidth="20.0" layoutX="50.0" layoutY="106.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="8">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="21.0" fitWidth="20.0" layoutX="50.0" layoutY="106.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="22" GridPane.rowIndex="5">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="21.0" fitWidth="20.0" layoutX="50.0" layoutY="106.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="21" GridPane.rowIndex="5">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fx:id="seat" fitHeight="21.0" fitWidth="20.0" layoutX="50.0" layoutY="129.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="7">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="24.0" fitWidth="35.0" pickOnBounds="true" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.rowIndex="12">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_twin_available.png" />
+                                 </image>
+                              </ImageView>
+                              <Label alignment="CENTER" layoutX="31.0" layoutY="131.0" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="1" GridPane.columnIndex="3" GridPane.rowIndex="7" />
+                              <Label alignment="CENTER" layoutX="12.0" layoutY="16.0" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="1" GridPane.columnIndex="3" GridPane.rowIndex="8" />
+                              <Label alignment="CENTER" layoutX="12.0" layoutY="16.0" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="1" GridPane.columnIndex="3" GridPane.rowIndex="9" />
+                              <Label alignment="CENTER" layoutX="12.0" layoutY="16.0" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="1" GridPane.columnIndex="3" GridPane.rowIndex="10" />
+                              <Label alignment="CENTER" layoutX="12.0" layoutY="16.0" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="1" GridPane.columnIndex="3" GridPane.rowIndex="11" />
+                              <Label alignment="CENTER" layoutX="12.0" layoutY="16.0" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="1" GridPane.columnIndex="3" GridPane.rowIndex="12" />
+                              <Label alignment="CENTER" layoutX="50.0" layoutY="108.0" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="2" GridPane.columnIndex="4" GridPane.rowIndex="7" />
+                              <Label alignment="CENTER" layoutX="12.0" layoutY="16.0" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="2" GridPane.columnIndex="4" GridPane.rowIndex="8" />
+                              <Label alignment="CENTER" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="2" GridPane.columnIndex="4" GridPane.rowIndex="9" />
+                              <Label alignment="CENTER" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="2" GridPane.columnIndex="4" GridPane.rowIndex="10" />
+                              <Label alignment="CENTER" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="2" GridPane.columnIndex="4" GridPane.rowIndex="11" />
+                              <Label alignment="CENTER" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="2" GridPane.columnIndex="4" GridPane.rowIndex="12" />
+                              <ImageView fitHeight="21.0" fitWidth="20.0" layoutX="50.0" layoutY="106.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="4">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="21.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="5">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="21.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="18" GridPane.rowIndex="11">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="21.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="18" GridPane.rowIndex="10">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="21.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="18" GridPane.rowIndex="9">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="21.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="18" GridPane.rowIndex="8">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="21.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="18" GridPane.rowIndex="7">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="21.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="18" GridPane.rowIndex="6">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="21.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="18" GridPane.rowIndex="5">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="21.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="18" GridPane.rowIndex="4">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="21.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="17" GridPane.rowIndex="11">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="21.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="17" GridPane.rowIndex="10">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="21.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="17" GridPane.rowIndex="9">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="21.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="17" GridPane.rowIndex="8">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="21.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="17" GridPane.rowIndex="7">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="21.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="17" GridPane.rowIndex="6">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="21.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="17" GridPane.rowIndex="5">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="21.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="17" GridPane.rowIndex="4">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="21.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="16" GridPane.rowIndex="11">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="21.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="16" GridPane.rowIndex="10">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="21.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="16" GridPane.rowIndex="9">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="21.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="16" GridPane.rowIndex="8">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="21.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="16" GridPane.rowIndex="7">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="21.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="16" GridPane.rowIndex="6">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="21.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="16" GridPane.rowIndex="5">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="21.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="16" GridPane.rowIndex="4">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="21.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="15" GridPane.rowIndex="11">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="21.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="15" GridPane.rowIndex="10">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="21.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="15" GridPane.rowIndex="9">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="21.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="15" GridPane.rowIndex="8">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="21.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="15" GridPane.rowIndex="7">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="21.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="15" GridPane.rowIndex="6">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="21.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="15" GridPane.rowIndex="5">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="21.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="15" GridPane.rowIndex="4">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="21.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="14" GridPane.rowIndex="11">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="21.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="14" GridPane.rowIndex="10">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="21.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="14" GridPane.rowIndex="9">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="21.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="14" GridPane.rowIndex="8">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="21.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="14" GridPane.rowIndex="7">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="21.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="14" GridPane.rowIndex="6">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="21.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="14" GridPane.rowIndex="5">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="21.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="14" GridPane.rowIndex="4">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="21.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="13" GridPane.rowIndex="11">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="21.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="13" GridPane.rowIndex="10">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="21.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="13" GridPane.rowIndex="9">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="21.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="13" GridPane.rowIndex="8">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="21.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="13" GridPane.rowIndex="7">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="21.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="13" GridPane.rowIndex="6">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="21.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="13" GridPane.rowIndex="5">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="21.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="13" GridPane.rowIndex="4">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="21.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="12" GridPane.rowIndex="11">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="21.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="12" GridPane.rowIndex="10">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="21.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="12" GridPane.rowIndex="9">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="21.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="12" GridPane.rowIndex="8">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="21.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="12" GridPane.rowIndex="7">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="21.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="12" GridPane.rowIndex="6">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="21.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="12" GridPane.rowIndex="5">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="21.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="12" GridPane.rowIndex="4">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="21.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="11" GridPane.rowIndex="11">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="21.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="11" GridPane.rowIndex="10">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="21.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="11" GridPane.rowIndex="9">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="21.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="11" GridPane.rowIndex="8">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="21.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="11" GridPane.rowIndex="7">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="21.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="11" GridPane.rowIndex="6">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="21.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="11" GridPane.rowIndex="5">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="21.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="11" GridPane.rowIndex="4">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="21.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="10" GridPane.rowIndex="11">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="21.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="10" GridPane.rowIndex="10">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="21.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="10" GridPane.rowIndex="9">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="21.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="10" GridPane.rowIndex="8">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="21.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="10" GridPane.rowIndex="7">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="21.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="10" GridPane.rowIndex="6">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="21.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="10" GridPane.rowIndex="5">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="21.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="10" GridPane.rowIndex="4">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="21.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="9" GridPane.rowIndex="11">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="21.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="9" GridPane.rowIndex="10">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="21.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="9" GridPane.rowIndex="9">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="21.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="9" GridPane.rowIndex="8">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="21.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="9" GridPane.rowIndex="7">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="21.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="9" GridPane.rowIndex="6">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="21.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="9" GridPane.rowIndex="5">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="21.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="9" GridPane.rowIndex="4">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="21.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="8" GridPane.rowIndex="10">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="21.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="8" GridPane.rowIndex="9">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="21.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="8" GridPane.rowIndex="8">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="21.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="8" GridPane.rowIndex="7">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="21.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="8" GridPane.rowIndex="6">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="21.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="8" GridPane.rowIndex="5">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="21.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="8" GridPane.rowIndex="4">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="21.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="8" GridPane.rowIndex="11">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="21.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="11">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="21.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="10">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="21.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="9">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="21.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="8">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="21.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="7">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="21.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="6">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="21.0" fitWidth="20.0" layoutX="376.0" layoutY="106.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="22" GridPane.rowIndex="11">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="21.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="21" GridPane.rowIndex="11">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="21.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="22" GridPane.rowIndex="10">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="21.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="21" GridPane.rowIndex="10">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="21.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="22" GridPane.rowIndex="9">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="21.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="21" GridPane.rowIndex="9">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="21.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="22" GridPane.rowIndex="8">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="21.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="21" GridPane.rowIndex="8">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="21.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="22" GridPane.rowIndex="7">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="21.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="21" GridPane.rowIndex="7">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="21.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="22" GridPane.rowIndex="6">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="21.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="21" GridPane.rowIndex="6">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="24.0" fitWidth="35.0" layoutX="50.0" layoutY="266.0" pickOnBounds="true" GridPane.columnIndex="21" GridPane.rowIndex="12">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_twin_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="24.0" fitWidth="35.0" pickOnBounds="true" GridPane.columnIndex="15" GridPane.rowIndex="13">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_twin_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="24.0" fitWidth="35.0" pickOnBounds="true" GridPane.columnIndex="13" GridPane.rowIndex="13">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_twin_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="24.0" fitWidth="35.0" pickOnBounds="true" GridPane.columnIndex="11" GridPane.rowIndex="13">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_twin_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="24.0" fitWidth="35.0" pickOnBounds="true" GridPane.columnIndex="9" GridPane.rowIndex="13">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_twin_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="24.0" fitWidth="35.0" pickOnBounds="true" GridPane.columnIndex="15" GridPane.rowIndex="12">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_twin_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="24.0" fitWidth="35.0" pickOnBounds="true" GridPane.columnIndex="13" GridPane.rowIndex="12">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_twin_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="24.0" fitWidth="35.0" pickOnBounds="true" GridPane.columnIndex="11" GridPane.rowIndex="12">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_twin_available.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="24.0" fitWidth="35.0" pickOnBounds="true" GridPane.columnIndex="9" GridPane.rowIndex="12">
+                                 <image>
+                                    <Image url="@../rsc/bookingPage/seat_twin_available.png" />
+                                 </image>
+                              </ImageView>
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#666666" height="20.0" stroke="TRANSPARENT" strokeType="INSIDE" width="406.0" GridPane.columnIndex="2" GridPane.columnSpan="23" GridPane.rowIndex="1" />
+                              <Label text="K" GridPane.columnIndex="25" GridPane.rowIndex="13" />
+                              <Label text="J" GridPane.columnIndex="25" GridPane.rowIndex="12" />
+                              <Label text="H" GridPane.columnIndex="25" GridPane.rowIndex="11" />
+                              <Label text="G" GridPane.columnIndex="25" GridPane.rowIndex="10" />
+                              <Label text="F" GridPane.columnIndex="25" GridPane.rowIndex="9" />
+                              <Label text="E" GridPane.columnIndex="25" GridPane.rowIndex="8" />
+                              <Label text="D" GridPane.columnIndex="25" GridPane.rowIndex="7" />
+                              <Label text="C" GridPane.columnIndex="25" GridPane.rowIndex="6" />
+                              <Label text="B" GridPane.columnIndex="25" GridPane.rowIndex="5" />
+                              <Label text="A" GridPane.columnIndex="25" GridPane.rowIndex="4" />
+                              <Label style="-fx-font-weight: bold;" text="MOVIE SCREEN" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="10" GridPane.columnSpan="14" GridPane.rowIndex="1" />
+                              <Label style="-fx-font-size: 20; -fx-font-weight: bold;" text="SEATING AREA" GridPane.columnIndex="18" GridPane.columnSpan="8" GridPane.rowIndex="15" GridPane.rowSpan="2" />
+                              <Label alignment="CENTER" layoutX="82.0" layoutY="126.0" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="3" GridPane.columnIndex="7" GridPane.rowIndex="5" />
+                              <Label alignment="CENTER" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="3" GridPane.columnIndex="7" GridPane.rowIndex="11" />
+                              <Label alignment="CENTER" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="3" GridPane.columnIndex="7" GridPane.rowIndex="10" />
+                              <Label alignment="CENTER" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="3" GridPane.columnIndex="7" GridPane.rowIndex="9" />
+                              <Label alignment="CENTER" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="3" GridPane.columnIndex="7" GridPane.rowIndex="8" />
+                              <Label alignment="CENTER" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="3" GridPane.columnIndex="7" GridPane.rowIndex="7" />
+                              <Label alignment="CENTER" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="3" GridPane.columnIndex="7" GridPane.rowIndex="6" />
+                              <Label alignment="CENTER" layoutX="64.0" layoutY="126.0" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="1" GridPane.columnIndex="7" GridPane.rowIndex="4" />
+                              <Label alignment="CENTER" layoutX="82.0" layoutY="126.0" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="2" GridPane.columnIndex="8" GridPane.rowIndex="4" />
+                              <Label alignment="CENTER" layoutX="136.0" layoutY="126.0" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="3" GridPane.columnIndex="9" GridPane.rowIndex="4" />
+                              <Label alignment="CENTER" layoutX="136.0" layoutY="126.0" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="4" GridPane.columnIndex="8" GridPane.rowIndex="5" />
+                              <Label alignment="CENTER" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="4" GridPane.columnIndex="8" GridPane.rowIndex="11" />
+                              <Label alignment="CENTER" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="4" GridPane.columnIndex="8" GridPane.rowIndex="10" />
+                              <Label alignment="CENTER" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="4" GridPane.columnIndex="8" GridPane.rowIndex="9" />
+                              <Label alignment="CENTER" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="4" GridPane.columnIndex="8" GridPane.rowIndex="8" />
+                              <Label alignment="CENTER" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="4" GridPane.columnIndex="8" GridPane.rowIndex="7" />
+                              <Label alignment="CENTER" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="4" GridPane.columnIndex="8" GridPane.rowIndex="6" />
+                              <Label alignment="CENTER" layoutX="154.0" layoutY="126.0" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="5" GridPane.columnIndex="9" GridPane.rowIndex="11" />
+                              <Label alignment="CENTER" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="5" GridPane.columnIndex="9" GridPane.rowIndex="10" />
+                              <Label alignment="CENTER" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="5" GridPane.columnIndex="9" GridPane.rowIndex="9" />
+                              <Label alignment="CENTER" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="5" GridPane.columnIndex="9" GridPane.rowIndex="8" />
+                              <Label alignment="CENTER" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="5" GridPane.columnIndex="9" GridPane.rowIndex="7" />
+                              <Label alignment="CENTER" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="5" GridPane.columnIndex="9" GridPane.rowIndex="6" />
+                              <Label alignment="CENTER" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="5" GridPane.columnIndex="9" GridPane.rowIndex="5" />
+                              <Label alignment="CENTER" layoutX="154.0" layoutY="126.0" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="4" GridPane.columnIndex="10" GridPane.rowIndex="4" />
+                              <Label alignment="CENTER" layoutX="172.0" layoutY="126.0" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="6" GridPane.columnIndex="10" GridPane.rowIndex="11" />
+                              <Label alignment="CENTER" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="6" GridPane.columnIndex="10" GridPane.rowIndex="10" />
+                              <Label alignment="CENTER" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="6" GridPane.columnIndex="10" GridPane.rowIndex="9" />
+                              <Label alignment="CENTER" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="6" GridPane.columnIndex="10" GridPane.rowIndex="8" />
+                              <Label alignment="CENTER" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="6" GridPane.columnIndex="10" GridPane.rowIndex="7" />
+                              <Label alignment="CENTER" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="6" GridPane.columnIndex="10" GridPane.rowIndex="6" />
+                              <Label alignment="CENTER" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="6" GridPane.columnIndex="10" GridPane.rowIndex="5" />
+                              <Label alignment="CENTER" layoutX="190.0" layoutY="126.0" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="6" GridPane.columnIndex="12" GridPane.rowIndex="4" />
+                              <Label alignment="CENTER" layoutX="172.0" layoutY="126.0" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="5" GridPane.columnIndex="11" GridPane.rowIndex="4" />
+                              <Label alignment="CENTER" layoutX="190.0" layoutY="126.0" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="7" GridPane.columnIndex="11" GridPane.rowIndex="11" />
+                              <Label alignment="CENTER" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="7" GridPane.columnIndex="11" GridPane.rowIndex="10" />
+                              <Label alignment="CENTER" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="7" GridPane.columnIndex="11" GridPane.rowIndex="9" />
+                              <Label alignment="CENTER" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="7" GridPane.columnIndex="11" GridPane.rowIndex="8" />
+                              <Label alignment="CENTER" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="7" GridPane.columnIndex="11" GridPane.rowIndex="7" />
+                              <Label alignment="CENTER" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="7" GridPane.columnIndex="11" GridPane.rowIndex="6" />
+                              <Label alignment="CENTER" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="7" GridPane.columnIndex="11" GridPane.rowIndex="5" />
+                              <Label alignment="CENTER" layoutX="208.0" layoutY="126.0" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="7" GridPane.columnIndex="13" GridPane.rowIndex="4" />
+                              <Label alignment="CENTER" layoutX="208.0" layoutY="126.0" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="8" GridPane.columnIndex="14" GridPane.rowIndex="4" />
+                              <Label alignment="CENTER" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="8" GridPane.columnIndex="12" GridPane.rowIndex="11" />
+                              <Label alignment="CENTER" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="8" GridPane.columnIndex="12" GridPane.rowIndex="10" />
+                              <Label alignment="CENTER" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="8" GridPane.columnIndex="12" GridPane.rowIndex="9" />
+                              <Label alignment="CENTER" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="8" GridPane.columnIndex="12" GridPane.rowIndex="8" />
+                              <Label alignment="CENTER" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="8" GridPane.columnIndex="12" GridPane.rowIndex="7" />
+                              <Label alignment="CENTER" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="8" GridPane.columnIndex="12" GridPane.rowIndex="6" />
+                              <Label alignment="CENTER" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="8" GridPane.columnIndex="12" GridPane.rowIndex="5" />
+                              <Label alignment="CENTER" layoutX="262.0" layoutY="104.0" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="9" GridPane.columnIndex="13" GridPane.rowIndex="11" />
+                              <Label alignment="CENTER" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="9" GridPane.columnIndex="13" GridPane.rowIndex="10" />
+                              <Label alignment="CENTER" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="9" GridPane.columnIndex="13" GridPane.rowIndex="9" />
+                              <Label alignment="CENTER" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="9" GridPane.columnIndex="13" GridPane.rowIndex="8" />
+                              <Label alignment="CENTER" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="9" GridPane.columnIndex="13" GridPane.rowIndex="7" />
+                              <Label alignment="CENTER" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="9" GridPane.columnIndex="13" GridPane.rowIndex="6" />
+                              <Label alignment="CENTER" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="9" GridPane.columnIndex="13" GridPane.rowIndex="5" />
+                              <Label alignment="CENTER" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="9" GridPane.columnIndex="15" GridPane.rowIndex="4" />
+                              <Label alignment="CENTER" layoutX="244.0" layoutY="126.0" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="10" GridPane.columnIndex="14" GridPane.rowIndex="11" />
+                              <Label alignment="CENTER" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="10" GridPane.columnIndex="14" GridPane.rowIndex="10" />
+                              <Label alignment="CENTER" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="10" GridPane.columnIndex="14" GridPane.rowIndex="9" />
+                              <Label alignment="CENTER" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="10" GridPane.columnIndex="14" GridPane.rowIndex="8" />
+                              <Label alignment="CENTER" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="10" GridPane.columnIndex="14" GridPane.rowIndex="7" />
+                              <Label alignment="CENTER" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="10" GridPane.columnIndex="14" GridPane.rowIndex="6" />
+                              <Label alignment="CENTER" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="10" GridPane.columnIndex="14" GridPane.rowIndex="5" />
+                              <Label alignment="CENTER" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="10" GridPane.columnIndex="16" GridPane.rowIndex="4" />
+                              <Label alignment="CENTER" layoutX="262.0" layoutY="126.0" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="11" GridPane.columnIndex="15" GridPane.rowIndex="11" />
+                              <Label alignment="CENTER" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="11" GridPane.columnIndex="15" GridPane.rowIndex="10" />
+                              <Label alignment="CENTER" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="11" GridPane.columnIndex="15" GridPane.rowIndex="9" />
+                              <Label alignment="CENTER" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="11" GridPane.columnIndex="15" GridPane.rowIndex="8" />
+                              <Label alignment="CENTER" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="11" GridPane.columnIndex="15" GridPane.rowIndex="7" />
+                              <Label alignment="CENTER" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="11" GridPane.columnIndex="15" GridPane.rowIndex="6" />
+                              <Label alignment="CENTER" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="11" GridPane.columnIndex="15" GridPane.rowIndex="5" />
+                              <Label alignment="CENTER" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="11" GridPane.columnIndex="17" GridPane.rowIndex="4" />
+                              <Label alignment="CENTER" layoutX="280.0" layoutY="258.0" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="12" GridPane.columnIndex="16" GridPane.rowIndex="11" />
+                              <Label alignment="CENTER" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="12" GridPane.columnIndex="16" GridPane.rowIndex="10" />
+                              <Label alignment="CENTER" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="12" GridPane.columnIndex="16" GridPane.rowIndex="9" />
+                              <Label alignment="CENTER" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="12" GridPane.columnIndex="16" GridPane.rowIndex="8" />
+                              <Label alignment="CENTER" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="12" GridPane.columnIndex="16" GridPane.rowIndex="7" />
+                              <Label alignment="CENTER" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="12" GridPane.columnIndex="16" GridPane.rowIndex="6" />
+                              <Label alignment="CENTER" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="12" GridPane.columnIndex="16" GridPane.rowIndex="5" />
+                              <Label alignment="CENTER" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="12" GridPane.columnIndex="18" GridPane.rowIndex="4" />
+                              <Label alignment="CENTER" layoutX="298.0" layoutY="126.0" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="13" GridPane.columnIndex="17" GridPane.rowIndex="11" />
+                              <Label alignment="CENTER" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="13" GridPane.columnIndex="17" GridPane.rowIndex="10" />
+                              <Label alignment="CENTER" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="13" GridPane.columnIndex="17" GridPane.rowIndex="9" />
+                              <Label alignment="CENTER" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="13" GridPane.columnIndex="17" GridPane.rowIndex="8" />
+                              <Label alignment="CENTER" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="13" GridPane.columnIndex="17" GridPane.rowIndex="7" />
+                              <Label alignment="CENTER" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="13" GridPane.columnIndex="17" GridPane.rowIndex="6" />
+                              <Label alignment="CENTER" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="13" GridPane.columnIndex="17" GridPane.rowIndex="5" />
+                              <Label alignment="CENTER" layoutX="316.0" layoutY="258.0" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="14" GridPane.columnIndex="18" GridPane.rowIndex="11" />
+                              <Label alignment="CENTER" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="14" GridPane.columnIndex="18" GridPane.rowIndex="10" />
+                              <Label alignment="CENTER" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="14" GridPane.columnIndex="18" GridPane.rowIndex="9" />
+                              <Label alignment="CENTER" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="14" GridPane.columnIndex="18" GridPane.rowIndex="8" />
+                              <Label alignment="CENTER" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="14" GridPane.columnIndex="18" GridPane.rowIndex="7" />
+                              <Label alignment="CENTER" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="14" GridPane.columnIndex="18" GridPane.rowIndex="6" />
+                              <Label alignment="CENTER" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="14" GridPane.columnIndex="18" GridPane.rowIndex="5" />
+                              <Label alignment="CENTER" layoutX="334.0" layoutY="126.0" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="15" GridPane.columnIndex="21" GridPane.rowIndex="11" />
+                              <Label alignment="CENTER" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="15" GridPane.columnIndex="21" GridPane.rowIndex="10" />
+                              <Label alignment="CENTER" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="15" GridPane.columnIndex="21" GridPane.rowIndex="9" />
+                              <Label alignment="CENTER" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="15" GridPane.columnIndex="21" GridPane.rowIndex="8" />
+                              <Label alignment="CENTER" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="15" GridPane.columnIndex="21" GridPane.rowIndex="7" />
+                              <Label alignment="CENTER" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="15" GridPane.columnIndex="21" GridPane.rowIndex="6" />
+                              <Label alignment="CENTER" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="15" GridPane.columnIndex="21" GridPane.rowIndex="5" />
+                              <Label alignment="CENTER" layoutX="388.0" layoutY="258.0" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="16" GridPane.columnIndex="22" GridPane.rowIndex="11" />
+                              <Label alignment="CENTER" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="16" GridPane.columnIndex="22" GridPane.rowIndex="10" />
+                              <Label alignment="CENTER" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="16" GridPane.columnIndex="22" GridPane.rowIndex="9" />
+                              <Label alignment="CENTER" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="16" GridPane.columnIndex="22" GridPane.rowIndex="8" />
+                              <Label alignment="CENTER" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="16" GridPane.columnIndex="22" GridPane.rowIndex="7" />
+                              <Label alignment="CENTER" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="16" GridPane.columnIndex="22" GridPane.rowIndex="6" />
+                              <Label alignment="CENTER" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="16" GridPane.columnIndex="22" GridPane.rowIndex="5" />
+                              <Label alignment="CENTER" layoutX="172.0" layoutY="104.0" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="3" GridPane.columnIndex="9" GridPane.rowIndex="12" />
+                              <Label alignment="CENTER" layoutX="190.0" layoutY="104.0" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="4" GridPane.columnIndex="10" GridPane.rowIndex="12" />
+                              <Label alignment="CENTER" layoutX="208.0" layoutY="104.0" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="5" GridPane.columnIndex="11" GridPane.rowIndex="12" />
+                              <Label alignment="CENTER" layoutX="226.0" layoutY="104.0" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="6" GridPane.columnIndex="12" GridPane.rowIndex="12" />
+                              <Label alignment="CENTER" layoutX="244.0" layoutY="104.0" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="7" GridPane.columnIndex="13" GridPane.rowIndex="12" />
+                              <Label alignment="CENTER" layoutX="262.0" layoutY="104.0" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="8" GridPane.columnIndex="14" GridPane.rowIndex="12" />
+                              <Label alignment="CENTER" layoutX="280.0" layoutY="104.0" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="9" GridPane.columnIndex="15" GridPane.rowIndex="12" />
+                              <Label alignment="CENTER" layoutX="298.0" layoutY="104.0" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="10" GridPane.columnIndex="16" GridPane.rowIndex="12" />
+                              <Label alignment="CENTER" layoutX="316.0" layoutY="104.0" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="11" GridPane.columnIndex="21" GridPane.rowIndex="12" />
+                              <Label alignment="CENTER" layoutX="334.0" layoutY="104.0" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="12" GridPane.columnIndex="22" GridPane.rowIndex="12" />
+                              <Label alignment="CENTER" layoutX="64.0" layoutY="280.0" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="1" GridPane.columnIndex="9" GridPane.rowIndex="13" />
+                              <Label alignment="CENTER" layoutX="82.0" layoutY="280.0" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="2" GridPane.columnIndex="10" GridPane.rowIndex="13" />
+                              <Label alignment="CENTER" layoutX="172.0" layoutY="280.0" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="3" GridPane.columnIndex="11" GridPane.rowIndex="13" />
+                              <Label alignment="CENTER" layoutX="190.0" layoutY="280.0" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="4" GridPane.columnIndex="12" GridPane.rowIndex="13" />
+                              <Label alignment="CENTER" layoutX="208.0" layoutY="280.0" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="5" GridPane.columnIndex="13" GridPane.rowIndex="13" />
+                              <Label alignment="CENTER" layoutX="226.0" layoutY="280.0" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="6" GridPane.columnIndex="14" GridPane.rowIndex="13" />
+                              <Label alignment="CENTER" layoutX="244.0" layoutY="280.0" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="7" GridPane.columnIndex="15" GridPane.rowIndex="13" />
+                              <Label alignment="CENTER" layoutX="262.0" layoutY="280.0" prefHeight="12.0" prefWidth="19.0" style="-fx-font-size: 10;" text="8" GridPane.columnIndex="16" GridPane.rowIndex="13" />
+                           </children>
+                           <padding>
+                              <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                           </padding>
+                           <BorderPane.margin>
+                              <Insets left="5.0" />
+                           </BorderPane.margin>
+                        </GridPane>
+                     </center>
+                  </BorderPane>
+                  <ImageView fx:id="backButton" fitHeight="68.0" fitWidth="91.0" onMouseClicked="#BackToHome" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <image>
+                        <Image url="@../rsc/bookingPage/button_home.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

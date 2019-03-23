@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="MovieTicketingSystem.jnlp">
+  <information>
+    <title>dasKino</title>
+    <vendor>dasKinoCo</vendor>
+    <description>MovieTicketingSystem</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="MovieTicketingSystem.jar" size="12132757" download="eager" />
+    <jar href="jfoenix-8.0.4.jar" size="2487326" download="eager" />
+  </resources>
+  <jfx:javafx-desc  width="600" height="400" main-class="MovieTicketingSystem.Main"  name="MovieTicketingSystem" />
+  <update check="background"/>
+</jnlp>

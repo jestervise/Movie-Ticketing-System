@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane fx:id="basePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="579.0" prefWidth="705.0" style="-fx-background-color: #242E44;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MovieTicketingSystem.controllers.PromotionPageController">
+   <children>
+      <ScrollPane layoutX="-1.0" layoutY="70.0" prefHeight="361.0" prefWidth="705.0" style="-fx-background-color: #242E44;" stylesheets="@../stylesheets/scrollPaneStyle.css">
+         <content>
+            <ImageView fitHeight="1583.0" fitWidth="846.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../rsc/posters.jpeg" />
+               </image>
+               <effect>
+                  <Glow />
+               </effect>
+            </ImageView>
+         </content>
+      </ScrollPane>
+      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="72.0" prefWidth="705.0" style="-fx-background-color: #4059A9;" text="Monthly Promotions" textAlignment="RIGHT" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="42.0" />
+         </font>
+         <effect>
+            <DropShadow height="108.07" radius="26.5175" width="0.0" />
+         </effect>
+      </Label>
+      <Pane layoutY="428.0" prefHeight="153.0" prefWidth="705.0" style="-fx-background-color: #4059A9;">
+         <children>
+            <Label layoutX="78.0" layoutY="29.0" prefHeight="30.0" prefWidth="539.0" style="-fx-font-weight: bold; -fx-font-size: 20;" text="Terms and Conditions apply for all the promotion above" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold Italic" size="23.0" />
+               </font>
+               <effect>
+                  <SepiaTone />
+               </effect>
+            </Label>
+            <Label layoutX="146.0" layoutY="76.0" prefHeight="34.0" prefWidth="395.0" style="-fx-font-weight: bold; -fx-font-size: 20;" text="Promotions start on 1/6/18 until 30/6/18" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold Italic" size="23.0" />
+               </font>
+               <effect>
+                  <SepiaTone />
+               </effect>
+            </Label>
+         </children>
+         <effect>
+            <DropShadow height="76.98" offsetY="-4.0" radius="23.995" />
+         </effect>
+      </Pane>
+      <ImageView fx:id="closeButton" fitHeight="72.0" fitWidth="97.0" layoutX="618.0" layoutY="5.0" onMouseClicked="#CloseWindow" onMouseEntered="#ScaleUpButton" onMouseExited="#ScaleDownButton" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../rsc/accountPage/button_cancel.png" />
+         </image>
+      </ImageView>
+   </children>
+</Pane>
